@@ -99,25 +99,25 @@ export default function Home() {
 
 
 
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Join the Gampaha RFC Family?
-            </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              Whether you're an experienced player or new to rugby, we welcome
-              everyone who shares our passion for the game.
-            </p>
-            <Link
-              to="/membership"
-              className="bg-white text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
-            >
-              Become a Member
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* <section className="py-16 bg-gray-900 text-white"> */}
+      {/*   <div className="container mx-auto px-4"> */}
+      {/*     <div className="max-w-3xl mx-auto text-center"> */}
+      {/*       <h2 className="text-3xl md:text-4xl font-bold mb-6"> */}
+      {/*         Ready to Join the Gampaha RFC Family? */}
+      {/*       </h2> */}
+      {/*       <p className="text-lg text-gray-300 mb-8"> */}
+      {/*         Whether you're an experienced player or new to rugby, we welcome */}
+      {/*         everyone who shares our passion for the game. */}
+      {/*       </p> */}
+      {/*       <Link */}
+      {/*         to="/membership" */}
+      {/*         className="bg-white text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl" */}
+      {/*       > */}
+      {/*         Become a Member */}
+      {/*       </Link> */}
+      {/*     </div> */}
+      {/*   </div> */}
+      {/* </section> */}
     </div>
   );
 }

@@ -6,29 +6,29 @@ import lg from '../images/logo-bg.webp';
 
 export default function Fixtures() {
   const [fixtures, setFixtures] = useState<Fixture[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState<'all' | 'upcoming' | 'completed'>('all');
 
-  useEffect(() => {
-    const fetchFixtures = async () => {
-      setLoading(true);
-      let query = supabase.from('fixtures').select('*').order('match_date', { ascending: false });
-
-      if (filter !== 'all') {
-        query = query.eq('status', filter);
-      }
-
-      const { data } = await query;
-      console.log(data);
-
-      if (data) {
-        setFixtures(data);
-      }
-      setLoading(false);
-    };
-
-    fetchFixtures();
-  }, [filter]);
+  // useEffect(() => {
+  //   const fetchFixtures = async () => {
+  //     setLoading(true);
+  //     let query = supabase.from('fixtures').select('*').order('match_date', { ascending: false });
+  //
+  //     if (filter !== 'all') {
+  //       query = query.eq('status', filter);
+  //     }
+  //
+  //     const { data } = await query;
+  //     console.log(data);
+  //
+  //     if (data) {
+  //       setFixtures(data);
+  //     }
+  //     setLoading(false);
+  //   };
+  //
+  //   fetchFixtures();
+  // }, [filter]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-GB', {

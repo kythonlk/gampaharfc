@@ -4,28 +4,28 @@ import { supabase, type Player } from '../lib/supabase';
 
 export default function Players() {
   const [players, setPlayers] = useState<Player[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState<string>('all');
 
-  useEffect(() => {
-    const fetchPlayers = async () => {
-      setLoading(true);
-      let query = supabase.from('players').select('*').order('jersey_number');
-
-      if (selectedTeam !== 'all') {
-        query = query.eq('team', selectedTeam);
-      }
-
-      const { data } = await query;
-
-      if (data) {
-        setPlayers(data);
-      }
-      setLoading(false);
-    };
-
-    fetchPlayers();
-  }, [selectedTeam]);
+  // useEffect(() => {
+  //   const fetchPlayers = async () => {
+  //     setLoading(true);
+  //     let query = supabase.from('players').select('*').order('jersey_number');
+  //
+  //     if (selectedTeam !== 'all') {
+  //       query = query.eq('team', selectedTeam);
+  //     }
+  //
+  //     const { data } = await query;
+  //
+  //     if (data) {
+  //       setPlayers(data);
+  //     }
+  //     setLoading(false);
+  //   };
+  //
+  //   fetchPlayers();
+  // }, [selectedTeam]);
 
   const teams = [
     { value: 'all', label: 'All Players' },

@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="fixed w-full p-2 h-10 flex z-50 sm:hidden items-center gap-3 justify-between text-base font-semibold bg-black/80 ">
+      <div className="fixed w-full p-2 h-10 flex z-50 sm:hidden items-center gap-3 justify-between text-base font-semibold bg-black/80">
         <a href="mailto:info@gampaharfc.com" className="flex items-center text-gray-100 hover:text-gray-200 transition-colors cursor-pointer">
           INFO@GAMPAHARFC.COM
         </a>
@@ -40,26 +40,26 @@ export default function Header() {
             target="_blank" className="text-gray-200 hover:text-gray-400 transition-all duration-300"><Youtube className="h-4 w-4" /></a>
         </div>
       </div>
-      <header className="fixed flex sm:flex-col w-full top-10 sm:top-0 left-0 right-0 z-50 font-rajdhani font-semibold bg-white/60 backdrop-blur-md border-b border-gray-200">
+      <header className="fixed flex sm:flex-col w-full top-10 sm:top-0 left-0 right-0 z-50 font-rajdhani font-semibold bg-black/70 backdrop-blur-md border-b border-gray-200">
         <div >
           <div className="mx-auto max-w-[1600px] px-4 sm:px-8 h-20 flex items-center justify-between text-xs">
             <Link to="/" className="flex-shrink-0 cursor-pointer group flex items-center gap-2" >
               <img src={logo} alt="Gampaha RFC" className="h-16 w-auto transition-all duration-300 group-hover:scale-105" />
-              <h1 className="text-2xl font-bold text-gray-900">Gampaha RFC</h1>
+              <h1 className="text-2xl font-bold text-white">Gampaha RFC</h1>
             </Link>
-            <div className="sm:flex hidden items-center gap-3 sm:gap-5 justify-center">
+            <div className="sm:flex hidden items-center gap-3 sm:gap-5 justify-center text-white">
               <a href="mailto:info@gampaharfc.com" className="hidden sm:flex items-center gap-2 hover:text-gray-700 transition-colors cursor-pointer">
                 <Mail className="h-5 w-5" />
                 <span className="text-base font-semibold">INFO@GAMPAHARFC.COM</span>
               </a>
               <a href="https://www.facebook.com/dubaituskersrfc"
-                target="_blank" className="text-gray-900 hover:text-gray-600 transition-all duration-300"><Facebook className="h-5 w-5" /></a>
+                target="_blank" className="text-white hover:text-gray-600 transition-all duration-300"><Facebook className="h-5 w-5" /></a>
               <a href="https://www.instagram.com/dubaituskersrfc"
-                target="_blank" className="text-gray-900 hover:text-gray-600 transition-all duration-300"><InstagramIcon className="h-5 w-5" /></a>
+                target="_blank" className="text-white hover:text-gray-600 transition-all duration-300"><InstagramIcon className="h-5 w-5" /></a>
               <a href="https://www.linkedin.com/company/dubaituskersrfc"
-                target="_blank" className="text-gray-900 hover:text-gray-600 transition-all duration-300"><Linkedin className="h-5 w-5" /></a>
+                target="_blank" className="text-white hover:text-gray-600 transition-all duration-300"><Linkedin className="h-5 w-5" /></a>
               <a href="https://www.youtube.com/@DubaiTuskers/"
-                target="_blank" className="text-gray-900 hover:text-gray-600 transition-all duration-300"><Youtube className="h-6 w-6" /></a>
+                target="_blank" className="text-white hover:text-gray-600 transition-all duration-300"><Youtube className="h-6 w-6" /></a>
               <a href="https://www.shop.dubaituskers.com/"
                 target="_blank" className="hidden xl:flex items-center gap-4 pl-20">
                 <button className="relative px-6 py-2.5 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white font-semibold text-sm tracking-wide overflow-hidden group">

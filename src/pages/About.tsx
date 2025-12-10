@@ -1,200 +1,199 @@
-import t2023 from '../images/2023.webp';
-import t2024 from '../images/2024.webp';
-import t2025 from '../images/jama-2025.webp';
+import gampaha from '../images/gampaha-team.jpg';
+import tuskers from '../images/tuskers.webp';
 
+import { Calendar, MapPin, Users, Globe, ArrowRight, Quote } from "lucide-react";
 
 export default function TuskersHistory() {
-  const leaders = [
-    {
-      year: '2023',
-      captain: 'Dayan Diddeniya',
-      viceCaptain: 'Arshad Jamaldeen',
-      image: t2023,
-      captainRole: 'Dubai 7s Captain 2023'
-    },
-    {
-      year: '2024',
-      captain: 'Dayan Diddeniya',
-      viceCaptain: 'Arshad Jamaldeen',
-      image: t2024,
-      captainRole: 'Dubai 7s Captain 2024'
-    },
-    {
-      year: '2025',
-      captain: 'Arshad Jamaldeen',
-      viceCaptain: 'Dulara Danusha',
-      image: t2025,
-      captainRole: 'Dubai 7s Captain 2025'
-    }
-  ];
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
+      <section className="relative py-24 md:py-32 px-6 overflow-hidden">
+        {/* Abstract Background Element */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
+          <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-gray-800 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-gray-900 rounded-full blur-[120px]"></div>
+        </div>
 
-      {/* HERO SECTION */}
-      <div
-        className="relative py-20 px-6 md:px-16 lg:px-24 bg-gray-950"
-      >
-        <div className="text-center space-y-6">
-          <h1 className="text-4xl md:text-7xl font-extrabold" style={{ color: 'white' }}>
-            ABOUT US
+        <div className="container mx-auto relative z-10 max-w-6xl text-center">
+          <div className="inline-flex items-center gap-2 border border-white/20 bg-white/5 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+            <span className="text-sm font-medium tracking-wide uppercase text-gray-300">Est. 2007 — Present</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-tight">
+            Two Clubs. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-600">
+              One Legacy.
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl font-bold tracking-widest text-gray-400">
-            ONE TEAM - ONE DREAM - ONE FAMILY
-          </p>
-          <div className="h-1 w-32 mx-auto" style={{ backgroundColor: 'white' }} />
-        </div>
-      </div>
 
-      {/* INTRODUCTION & PARTNERSHIP */}
-      <div className="py-16 px-6 md:px-16 lg:px-24 bg-white">
-        <div className="max-w-4xl mx-auto space-y-8 text-lg text-gray-700 leading-relaxed">
-          <p>
-            <span className="font-bold text-gray-900">Gampaha Rugby Football Club (Gampaha RFC)</span> is a dynamic and rapidly developing rugby union club based in Gampaha, Sri Lanka. Founded in <span className="font-bold text-gray-900">2007</span> by <span className="font-bold text-gray-900">Dayan Diddeniya</span>, the club was established with the vision of promoting rugby among youth and adult players in the region. Since then, the club has been committed to offering high-quality training, structured competitions, and an inclusive rugby culture.
-          </p>
-          <p>
-            As an affiliated partner club of <span className="font-bold text-gray-900">Dubai Tuskers RFC</span>, we benefit from international exposure, shared coaching expertise, and professional development opportunities. This partnership creates pathways for our players to gain overseas experience and access higher-level competition.
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            From the fields of Gampaha to the arenas of Dubai. A story of friendship, resilience, and an unwavering love for the game of rugby.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* MISSION & VISION */}
-      <div className="py-16 px-6 md:px-16 lg:px-24 bg-gray-900 text-white">
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Mission */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white border-l-4 border-white pl-4">
-              Our Mission
-            </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Our mission is to build a strong rugby foundation in Gampaha by focusing on character development, teamwork, physical fitness, and sportsmanship. We welcome players of all skill levels—beginners, school leavers, experienced players, and enthusiasts who want to stay connected to the sport.
-            </p>
+      <section className="relative py-20 px-4 md:px-8">
+        <div className="container mx-auto max-w-7xl">
+
+          {/* Vertical Line (Desktop) */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gray-700 to-transparent hidden md:block"></div>
+
+          {/* --- CHAPTER 1: GAMPAHA RFC --- */}
+          <div className="relative flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0 mb-32 group">
+
+            {/* Left Content (Text) */}
+            <div className="w-full md:w-1/2 md:pr-16 md:text-right order-2 md:order-1 relative z-10">
+              <div className="inline-flex items-center gap-2 text-gray-400 mb-4 md:flex-row-reverse">
+                <Calendar className="w-4 h-4" />
+                <span className="font-mono text-sm">2007</span>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white group-hover:text-gray-200 transition-colors">
+                The Origins: <br /> Gampaha RFC
+              </h2>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Gampaha RFC was founded by <strong className="text-white">Dayan Diddeniya</strong> together with his school friend, the late <strong className="text-white">Kanishka Dias</strong>. What began as a shared passion for rugby between two lifelong friends soon evolved into a community-driven rugby club with a mission to uplift the sport in the Gampaha region.
+              </p>
+
+              <p className="text-gray-400 leading-relaxed">
+                Their vision was simple yet profound — to create a platform where young athletes could discover rugby, develop discipline, and grow into competitive players.
+              </p>
+            </div>
+
+            {/* Center Dot */}
+            <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-black border border-gray-600 rounded-full items-center justify-center z-20 group-hover:border-white transition-colors duration-500">
+              <div className="w-3 h-3 bg-white rounded-full"></div>
+            </div>
+
+            {/* Right Content (Image Placeholder) */}
+            <div className="w-full md:w-1/2 md:pl-16 order-1 md:order-2">
+              <div className="relative aspect-[4/3] bg-gray-900 rounded-lg overflow-hidden border border-white/10 group-hover:border-white/30 transition-all duration-500 shadow-2xl">
+                {/* Replace src with actual Gampaha RFC image */}
+                <img
+                  src={gampaha}
+                  alt="Gampaha RFC Early Days"
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 grayscale hover:grayscale-0"
+                />
+                <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur px-3 py-1 rounded border border-white/10">
+                  <span className="text-xs font-mono text-gray-300">Sri Lanka, 2007</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Vision */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white border-l-4 border-white pl-4">
-              Our Vision
-            </h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
-              To establish Gampaha RFC as one of Sri Lanka’s leading rugby institutions and create a platform for talented athletes to excel both locally and internationally.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* WHAT WE DO & VALUES */}
-      <div className="py-16 px-6 md:px-16 lg:px-24 bg-white">
-        <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
-          {/* What We Do */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-gray-900 pl-4">
-              What We Do
-            </h2>
-            <ul className="space-y-4">
-              {[
-                "Weekly training sessions for youth and senior teams",
-                "Player fitness & conditioning programs",
-                "Participation in local and regional tournaments",
-                "School rugby development and talent identification",
-                "Community-driven rugby events"
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="text-gray-900 font-bold mt-1">🏉</span>
-                  <span className="text-gray-700 text-lg">{item}</span>
-                </li>
-              ))}
-            </ul>
+          {/* --- TRIBUTE SECTION (Inset) --- */}
+          <div className="max-w-3xl mx-auto my-24 relative">
+            <div className="absolute -left-4 -top-4 text-gray-800">
+              <Quote size={80} />
+            </div>
+            <div className="bg-gray-900/50 border-l-2 border-white p-8 md:p-12 relative backdrop-blur-sm">
+              <p className="text-xl md:text-2xl text-gray-300 font-light italic leading-relaxed">
+                "Although Kanishka Dias is no longer with us, his legacy remains deeply rooted in the club’s identity. His memory continues to inspire every player who proudly wears the Gampaha RFC colours."
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <div className="h-px w-12 bg-gray-600"></div>
+                <span className="text-sm font-semibold text-white uppercase tracking-widest">In Memoriam</span>
+              </div>
+            </div>
           </div>
 
-          {/* Values */}
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-gray-900 pl-4">
-              Our Values
-            </h2>
-            <ul className="space-y-4">
-              {[
-                "Discipline",
-                "Commitment",
-                "Respect",
-                "Teamwork",
-                "Growth"
-              ].map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-gray-900"></span>
-                  <span className="text-gray-900 font-bold text-xl">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-8 p-6 bg-gray-100 rounded-xl border-l-4 border-gray-900">
-              <p className="text-gray-700 font-medium italic">
-                "At Gampaha RFC, we believe in developing not just skilled athletes, but responsible and confident individuals who contribute positively to the community."
+          {/* --- CHAPTER 2: DUBAI TUSKERS --- */}
+          <div className="relative flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0 mb-20 group">
+
+            {/* Left Content (Image Placeholder) */}
+            <div className="w-full md:w-1/2 md:pr-16 relative z-10">
+              <div className="relative aspect-[4/3] bg-gray-900 rounded-lg overflow-hidden border border-white/10 group-hover:border-white/30 transition-all duration-500 shadow-2xl">
+                {/* Replace src with actual Dubai Tuskers image */}
+                <img
+                  src={tuskers}
+                  alt="Dubai Tuskers Team"
+                  className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-500 grayscale hover:grayscale-0"
+                />
+                <div className="absolute bottom-4 right-4 bg-black/80 backdrop-blur px-3 py-1 rounded border border-white/10">
+                  <span className="text-xs font-mono text-gray-300">United Arab Emirates, 2023</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Center Dot */}
+            <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 bg-black border border-gray-600 rounded-full items-center justify-center z-20 group-hover:border-white transition-colors duration-500">
+              <Globe className="w-5 h-5 text-gray-300" />
+            </div>
+
+            {/* Right Content (Text) */}
+            <div className="w-full md:w-1/2 md:pl-16 relative z-10">
+              <div className="inline-flex items-center gap-2 text-gray-400 mb-4">
+                <Calendar className="w-4 h-4" />
+                <span className="font-mono text-sm">2023</span>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white group-hover:text-gray-200 transition-colors">
+                Going Global: <br /> Dubai Tuskers RFC
+              </h2>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Inspired by the success and spirit of Gampaha RFC, Dayan Diddeniya expanded his rugby vision beyond Sri Lanka. In 2023, he founded <strong className="text-white">Dubai Tuskers RFC</strong>, bringing the same passion, community values, and commitment to excellence to the UAE.
+              </p>
+
+              <p className="text-gray-400 leading-relaxed">
+                Dubai Tuskers RFC rapidly grew into a multicultural rugby family, uniting players from diverse backgrounds under one badge.
               </p>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* LEADERS SECTION */}
-      <div className="py-16 px-6 md:px-16 lg:px-24 bg-white">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'black' }}>
-            Leadership Legends
+        </div>
+      </section>
+
+      {/* --- CONNECTED IDENTITY --- */}
+      <section className="py-24 bg-neutral-900 border-t border-white/5">
+        <div className="container mx-auto px-6 text-center">
+          <div className="mb-8 flex justify-center items-center gap-4 text-gray-500">
+            <span className="uppercase tracking-widest text-sm">Sri Lanka</span>
+            <ArrowRight className="w-5 h-5" />
+            <span className="uppercase tracking-widest text-sm">UAE</span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Sister Clubs
           </h2>
-          <p className="text-xl" style={{ color: '#374151' }}>Emirates Dubai Rugby 7s</p>
-          <div className="h-1 w-32 mx-auto mt-6" style={{ backgroundColor: 'black' }} />
-        </div>
 
-        <div className="grid md:grid-cols-3 gap-12 mb-8 mx-10">
-          {leaders.map((leader, idx) => (
-            <div key={idx} className="rounded-2xl overflow-hidden border-2"
-              style={{ backgroundColor: '#111827', borderColor: '#374151' }}
-            >
-              <img
-                src={leader.image}
-                alt={leader.captain}
-                className="w-full h-[24em] md:h-[40em] object-cover"
-              />
-              <div className="p-6 space-y-2">
-                <div
-                  className="px-3 py-1 rounded-full font-bold text-sm inline-block"
-                  style={{ backgroundColor: 'white', color: 'black' }}
-                >
-                  {leader.year}
-                </div>
-                <h3 className="font-bold text-2xl" style={{ color: 'white' }}>{leader.captain}</h3>
-                <p className="text-white text-lg">{leader.captainRole}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
+            Today, Gampaha RFC and Dubai Tuskers RFC stand connected by history, passion, and the founder’s lifelong dedication to developing rugby across borders.
+          </p>
 
-        <div className="rounded-3xl overflow-hidden border-2" style={{ borderColor: '#374151' }}>
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead style={{ backgroundColor: 'black' }}>
-                <tr>
-                  <th className="px-6 py-4 text-left font-bold text-lg" style={{ color: 'white' }}>YEAR</th>
-                  <th className="px-6 py-4 text-left font-bold text-lg" style={{ color: 'white' }}>CAPTAIN</th>
-                  <th className="px-6 py-4 text-left font-bold text-lg" style={{ color: 'white' }}>VICE CAPTAIN</th>
-                </tr>
-              </thead>
-
-              <tbody style={{ backgroundColor: '#111827' }}>
-                {leaders.map((leader, idx) => (
-                  <tr key={idx} className="border-b" style={{ borderColor: '#374151' }}>
-                    <td className="px-6 py-4 font-bold text-xl" style={{ color: 'white' }}>{leader.year}</td>
-                    <td className="px-6 py-4 text-white text-lg">{leader.captain}</td>
-                    <td className="px-6 py-4 text-white text-lg">{leader.viceCaptain}</td>
-                  </tr>
-                ))}
-              </tbody>
-
-            </table>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <FeatureCard
+              icon={<Users className="w-6 h-6" />}
+              title="Community"
+              desc="Building brotherhood beyond the pitch."
+            />
+            <FeatureCard
+              icon={<MapPin className="w-6 h-6" />}
+              title="Expansion"
+              desc="Taking local talent to international stages."
+            />
+            <FeatureCard
+              icon={<Globe className="w-6 h-6" />}
+              title="Diversity"
+              desc="Uniting cultures through the sport of rugby."
+            />
           </div>
         </div>
+      </section>
 
-      </div>
     </div>
   );
-}
+};
+
+const FeatureCard = ({ icon, title, desc }: { icon: any, title: string, desc: string }) => (
+  <div className="p-6 bg-black border border-white/10 hover:border-white/30 transition-all duration-300 rounded-lg text-center group">
+    <div className="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center mx-auto mb-4 text-gray-300 group-hover:text-white group-hover:bg-white/10 transition-all">
+      {icon}
+    </div>
+    <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+    <p className="text-sm text-gray-400">{desc}</p>
+  </div>
+);
+

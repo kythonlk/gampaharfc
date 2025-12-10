@@ -2,12 +2,13 @@ import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'luc
 import { useEffect, useRef, useState } from 'react';
 import { supabase, type Sponsor } from '../lib/supabase';
 import logo from '../images/logo.webp';
-import lion from '../images/lion.webp';
-import diddeniya from '../images/diddeniya.webp';
-import spiderpluse from '../images/spiderplus.webp';
-import thambapanni from '../images/thambapanni.webp';
-import kibsons from '../images/kibsons.webp';
-import SlipSafe from '../images/slipsafe.webp';
+import { Link } from 'react-router-dom';
+// import lion from '../images/lion.webp';
+// import diddeniya from '../images/diddeniya.webp';
+// import spiderpluse from '../images/spiderplus.webp';
+// import thambapanni from '../images/thambapanni.webp';
+// import kibsons from '../images/kibsons.webp';
+// import SlipSafe from '../images/slipsafe.webp';
 
 export default function Footer() {
   const [sponsors, setSponsors] = useState<Sponsor[]>([]);
@@ -38,14 +39,14 @@ export default function Footer() {
   }, [width]);
 
 
-  const sp = [
-    { name: 'Lion', logo_url: lion, website_url: 'https://lionbeer.com/', },
-    { name: 'Diddeniya', logo_url: diddeniya, website_url: 'https://diddeniya.com/' },
-    { name: 'Spiderplus', logo_url: spiderpluse, website_url: 'https://spiderplus.com/' },
-    { name: 'Thambapanni', logo_url: thambapanni, website_url: 'https://thambapanni.com/' },
-    { name: 'Kibsons', logo_url: kibsons, website_url: 'https://kibsons.com/' },
-    { name: 'Slip Safe', logo_url: SlipSafe, website_url: 'https://slipsafe.com/' },
-  ]
+  // const sp = [
+  //   { name: 'Lion', logo_url: lion, website_url: 'https://lionbeer.com/', },
+  //   { name: 'Diddeniya', logo_url: diddeniya, website_url: 'https://diddeniya.com/' },
+  //   { name: 'Spiderplus', logo_url: spiderpluse, website_url: 'https://spiderplus.com/' },
+  //   { name: 'Thambapanni', logo_url: thambapanni, website_url: 'https://thambapanni.com/' },
+  //   { name: 'Kibsons', logo_url: kibsons, website_url: 'https://kibsons.com/' },
+  //   { name: 'Slip Safe', logo_url: SlipSafe, website_url: 'https://slipsafe.com/' },
+  // ]
 
   useEffect(() => {
     const fetchSponsors = async () => {
@@ -55,7 +56,7 @@ export default function Footer() {
         .order('display_order', { ascending: true });
 
       if (data) {
-        const mergedSponsors = [...data, ...sp];
+        const mergedSponsors = [...data];
         setSponsors(mergedSponsors);
       }
     };
@@ -120,11 +121,11 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img
-              src={logo}
-              alt="Gampaha RFC"
-              className="h-16 w-auto mb-4 bg-white rounded-lg px-4"
-            />
+
+            <Link to="/" className="flex-shrink-0 cursor-pointer group flex items-center gap-2" >
+              <img src={logo} alt="Gampaha RFC" className="h-20 w-auto transition-all duration-300 group-hover:scale-105" />
+              <h1 className="text-2xl font-bold text-white">Gampaha RFC</h1>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               Gampaha RFC is a premier rugby club in Gampaha, founded by
               Dayan Diddeniya. We are committed to developing rugby talent and
