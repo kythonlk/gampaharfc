@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-1 * var(--loop-width)));
+  }
+}
+
+
+/* @keyframes fixtureScroll { */
+/*   from { */
+/*     transform: translateX(0); */
+/*   } */
+/**/
+/*   to { */
+/*     transform: translateX(calc(-1 * var(--fixture-width))); */
+/*   } */
+/* } */
+
+/* index.css or global.css */
+@keyframes fixtureScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-fixture-scroll {
+  animation: fixtureScroll 30s linear infinite;
+}
+
+/* Pause animation on hover for better UX */
+.animate-fixture-scroll:hover {
+  animation-play-state: paused;
+}
