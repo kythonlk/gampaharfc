@@ -11,11 +11,11 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data: newsData } = await supabase
-        .from('news')
-        .select('*')
-        .order('published_date', { ascending: false })
-        .limit(4);
+      // const { data: newsData } = await supabase
+      //   .from('news')
+      //   .select('*')
+      //   .order('published_date', { ascending: false })
+      //   .limit(4);
 
       const { data: fixturesData } = await supabase
         .from('fixtures')
@@ -24,7 +24,7 @@ export default function Home() {
         .order('match_date', { ascending: true })
         .limit(6);
 
-      if (newsData) setLatestNews(newsData);
+      // if (newsData) setLatestNews(newsData);
       if (fixturesData) setUpcomingFixtures(fixturesData);
     };
 

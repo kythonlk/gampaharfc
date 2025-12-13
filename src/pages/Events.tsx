@@ -4,24 +4,24 @@ import { supabase, type Event } from '../lib/supabase';
 
 export default function Events() {
   const [events, setEvents] = useState<Event[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchEvents = async () => {
-      setLoading(true);
-      const { data } = await supabase
-        .from('events')
-        .select('*')
-        .order('event_date', { ascending: true });
+  // useEffect(() => {
+  //   const fetchEvents = async () => {
+  //     setLoading(true);
+  //     const { data } = await supabase
+  //       .from('events')
+  //       .select('*')
+  //       .order('event_date', { ascending: true });
 
-      if (data) {
-        setEvents(data);
-      }
-      setLoading(false);
-    };
+  //     if (data) {
+  //       setEvents(data);
+  //     }
+  //     setLoading(false);
+  //   };
 
-    fetchEvents();
-  }, []);
+  //   fetchEvents();
+  // }, []);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-GB', {

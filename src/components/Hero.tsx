@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import a from '../images/b1.webp';
+// import a from '../images/b1.webp';
 // import b from '../images/b2.webp';
 import c from '../images/15s.webp';
 import f from '../images/10s.webp';
@@ -16,13 +16,6 @@ export default function HeroWithMembership() {
       subtitle: "Senior Men • Senior Women • Touch Rugby",
       cta: "Become a Member",
       link: "/membership",
-    },
-    {
-      img: a,
-      title: "Gulf Mens Social Plate Champions",
-      subtitle: "2024 Dubai 7s Tournament",
-      cta: "Learn More",
-      link: "/about",
     },
     {
       img: "https://qasvqrglwupcdqosogac.supabase.co/storage/v1/object/public/posts/2025-banner.png",
