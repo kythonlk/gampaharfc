@@ -13,7 +13,7 @@ export default function Policies() {
         'Zero tolerance for discrimination, harassment, or bullying',
         'Fair play and sportsmanship at all times',
         'Commitment to team values and club culture',
-        'Adherence to UAE laws and rugby regulations',
+        'Adherence to Sri Lanka Rugby laws and rugby regulations',
       ],
     },
     {
@@ -50,7 +50,7 @@ export default function Policies() {
       points: [
         'Annual membership fees as published',
         'Commitment to training attendance (playing members)',
-        'Adherence to UAE laws and rugby regulations. More infor www.uaerugby.ae',
+        'Adherence to Sri Lanka Rugby laws and rugby regulations. More infor https://srilankarugby.lk/Home/SLRForms',
         'Payment of match fees where applicable',
         'Notice period for membership cancellation',
         'Refund policy as per membership agreement',
@@ -145,9 +145,11 @@ export default function Policies() {
                 <p className="text-gray-600 mb-4">
                   Our commitment to safeguarding all members
                 </p>
-                <button className="text-gray-900 font-semibold hover:text-black transition-colors">
-                  Download PDF →
-                </button>
+                <a href="https://www.world.rugby/organisation/governance/safeguarding">
+                  <button className="text-gray-900 font-semibold hover:text-black transition-colors">
+                    View Policy →
+                  </button>
+                </a>
               </div>
             </div>
           </div>

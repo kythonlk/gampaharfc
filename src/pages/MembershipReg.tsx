@@ -326,7 +326,7 @@ export default function MembershipRegister() {
             {/* Emirates ID */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block font-semibold text-gray-700 mb-1">Emirates ID Number *</label>
+                <label className="block font-semibold text-gray-700 mb-1">NIC Number *</label>
                 <input
                   type="text"
                   name="emirates_id"
@@ -334,11 +334,10 @@ export default function MembershipRegister() {
                   onChange={handleChange}
                   required
                   className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-gray-500"
-                  placeholder="_ _ _ - _ _ _ _ - _ _ _ _ _ _ _ - _0"
                 />
               </div>
               <div>
-                <label className="block font-semibold text-gray-700 mb-1">Upload Emirates ID Copy *</label>
+                <label className="block font-semibold text-gray-700 mb-1">Upload NIC Copy *</label>
                 <input
                   type="file"
                   name="emirates_id_file"
