@@ -5,7 +5,7 @@ import c from '../images/GR_15s.webp';
 import f from '../images/GR_10s.webp';
 import g from '../images/GR_7s.webp';
 import d from '../images/GR_touch.webp';
-import h from '../images/b4.webp';
+// import h from '../images/b4.webp';
 import gampaha from '../images/gamapaha.jpg';
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,7 @@ export default function HeroWithMembership() {
     },
     {
       img: "https://qasvqrglwupcdqosogac.supabase.co/storage/v1/object/public/posts/2025-banner.png",
-      title: "Gulf Mens Open Bowl Runner Up",
+      title: "Dubai Tuskers - Gulf Mens Open Bowl Runner Up",
       subtitle: "2025 Dubai 7s Tournament",
       cta: "Learn More",
       link: "/about",
