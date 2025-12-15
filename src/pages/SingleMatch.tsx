@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Calendar, MapPin, Trophy } from "lucide-react";
 import { supabase, type Fixture } from "../lib/supabase";
-import lg from '../images/logo-bg.webp';
+import lg from '../images/logo.webp';
 
 function SingleMatch() {
   const { id } = useParams();

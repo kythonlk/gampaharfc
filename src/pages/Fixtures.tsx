@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 import { supabase, type Fixture } from '../lib/supabase';
 import { Link } from 'react-router-dom';
-import lg from '../images/logo-bg.webp';
+import lg from '../images/logo.webp';
 
 export default function Fixtures() {
   const [fixtures, setFixtures] = useState<Fixture[]>([]);

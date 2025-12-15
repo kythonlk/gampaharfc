@@ -1,10 +1,28 @@
-import gampaha from '../images/gampaha-team.jpg';
+import gampaha from '../images/2007.jpg';
 import tuskers from '../images/tuskers.webp';
+import glogo from '../images/logo-full.webp';
+import tlogo from '../images/tuskers-logo.webp';
+import l1 from '../images/l1.webp';
+import l2 from '../images/l2.webp';
+import l3 from '../images/l3.webp';
 
 import { Calendar, MapPin, Users, Globe, ArrowRight, Quote } from "lucide-react";
 
 export default function TuskersHistory() {
-
+  const leaders = [
+    {
+      captain: 'Dayan Diddeniya',
+      image: l1,
+    },
+    {
+      captain: 'Hashan Sooriarachchi',
+      image: l2,
+    },
+    {
+      captain: 'Dinusha Lakshitha',
+      image: l3,
+    }
+  ];
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
       <section className="relative py-24 md:py-32 px-6 overflow-hidden">
@@ -30,6 +48,11 @@ export default function TuskersHistory() {
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             From the fields of Gampaha to the arenas of Dubai. A story of friendship, resilience, and an unwavering love for the game of rugby.
           </p>
+        </div>
+        {/* here two clubs logo */}
+        <div className="flex items-center justify-center text-center gap-4 max-w-5xl mx-auto mt-6">
+          <img src={glogo} alt="Tuskers" className="h-40 w-auto" />
+          <img src={tlogo} alt="Tuskers" className="h-40 w-auto" />
         </div>
       </section>
 
@@ -90,7 +113,7 @@ export default function TuskersHistory() {
             </div>
             <div className="bg-gray-900/50 border-l-2 border-white p-8 md:p-12 relative backdrop-blur-sm">
               <p className="text-xl md:text-2xl text-gray-300 font-light italic leading-relaxed">
-                "Although Kanishka Dias is no longer with us, his legacy remains deeply rooted in the club’s identity. His memory continues to inspire every player who proudly wears the Gampaha RFC colours."
+                “Although Kanishka Dias is no longer with us, his legacy remains deeply rooted in the club’s identity. There is another legacy as well—late Thilina Maduranga. The memories of both legends continue to inspire every player who proudly wears the Gampaha RFC colours.”
               </p>
               <div className="mt-6 flex items-center gap-3">
                 <div className="h-px w-12 bg-gray-600"></div>
@@ -183,6 +206,31 @@ export default function TuskersHistory() {
         </div>
       </section>
 
+      <div className="py-16 px-6 md:px-16 lg:px-24 bg-white">
+        <div className="text-center mb-12 text-black">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Shared Colours
+          </h2>
+          <p className="text-xl" >Players who proudly wore both the Gampaha RFC and Dubai Tuskers jerseys — connecting Sri Lankan roots with Dubai rugby passion.</p>
+          <div className="h-1 w-32 mx-auto mt-6 bg-black" />
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-12 mb-8 mx-auto max-w-6xl">
+          {leaders.map((leader, idx) => (
+            <div key={idx} className="rounded-2xl overflow-hidden border-2"
+            >
+              <img
+                src={leader.image}
+                alt={leader.captain}
+                className="w-full h-[24em] md:h-auto md:max-h-[24em] object-cover"
+              />
+              <div className="p-6 space-y-2">
+                <h3 className="font-bold text-2xl text-black">{leader.captain}</h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

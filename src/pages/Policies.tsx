@@ -156,37 +156,6 @@ export default function Policies() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-gray-200 border-l-4 border-gray-900 rounded-r-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Privacy & Data Protection
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Gampaha RFC is committed to protecting your personal
-                information. We collect and process member data in accordance with
-                UAE data protection regulations. Your information is used solely
-                for club administration, communication, and member services.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                We will never share your personal information with third parties
-                without your explicit consent, except where required by law or for
-                essential club operations (such as insurance).
-              </p>
-              <a
-                href="https://uaerugby.ae/resources/regulations/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-900 font-semibold hover:text-black/80 text-2xl transition-colors mt-4 bg-gray-300 p-2 "
-              >
-                Read UAE Rugby FEDERATION official Policies and Regulations
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">

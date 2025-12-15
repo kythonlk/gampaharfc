@@ -135,7 +135,7 @@ export default function MedicalClearanceForm() {
               <InputGroup label="Full Name" name="fullName" value={formData.fullName} onChange={handleInputChange} required />
               <InputGroup label="Date of Birth" name="dob" type="date" value={formData.dob} onChange={handleInputChange} required />
               <InputGroup label="Nationality" name="nationality" value={formData.nationality} onChange={handleInputChange} required />
-              <InputGroup label="Passport / Emirates ID" name="passportId" value={formData.passportId} onChange={handleInputChange} required />
+              <InputGroup label="NIC / Passport Number" name="passportId" value={formData.passportId} onChange={handleInputChange} required />
               <InputGroup label="Contact Number" name="contactNumber" type="tel" value={formData.contactNumber} onChange={handleInputChange} required />
               <InputGroup label="Emergency Contact (Name & Number)" name="emergencyContact" value={formData.emergencyContact} onChange={handleInputChange} required />
             </div>

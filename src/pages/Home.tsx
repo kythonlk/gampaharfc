@@ -72,17 +72,17 @@ export default function Home() {
       <About upcomingFixtures={upcomingFixtures} />
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
             <div className="text-center p-6 bg-gray-900 text-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
               <Users className="h-12 w-12 mx-auto mb-4 text-white" />
               <h3 className="text-2xl font-bold mb-2">50+</h3>
               <p className="text-gray-300">Active Members</p>
             </div>
-            <div className="text-center p-6 bg-gray-900 text-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
-              <Trophy className="h-12 w-12 mx-auto mb-4 text-white" />
-              <h3 className="text-2xl font-bold mb-2">Champions</h3>
-              <p className="text-gray-300">Emirates Dubai 7s 2024</p>
-            </div>
+            {/* <div className="text-center p-6 bg-gray-900 text-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"> */}
+            {/*   <Trophy className="h-12 w-12 mx-auto mb-4 text-white" /> */}
+            {/*   <h3 className="text-2xl font-bold mb-2">Champions</h3> */}
+            {/*   <p className="text-gray-300">Emirates Dubai 7s 2024</p> */}
+            {/* </div> */}
             <div className="text-center p-6 bg-gray-900 text-white rounded-xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2">
               <Target className="h-12 w-12 mx-auto mb-4 text-white" />
               <h3 className="text-2xl font-bold mb-2">4 Formats</h3>

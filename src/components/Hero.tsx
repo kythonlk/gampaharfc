@@ -1,19 +1,20 @@
 import { useState, useEffect } from "react";
 // import a from '../images/b1.webp';
 // import b from '../images/b2.webp';
-import c from '../images/15s.webp';
-import f from '../images/10s.webp';
-import g from '../images/7s.webp';
-import d from '../images/touch.webp';
+import c from '../images/GR_15s.webp';
+import f from '../images/GR_10s.webp';
+import g from '../images/GR_7s.webp';
+import d from '../images/GR_touch.webp';
 import h from '../images/b4.webp';
+import gampaha from '../images/gamapaha.jpg';
 import { Link } from "react-router-dom";
 
 export default function HeroWithMembership() {
   const slides = [
     {
-      img: h,
+      img: gampaha,
       title: "Join the Gampaha RFC Family",
-      subtitle: "Senior Men • Senior Women • Touch Rugby",
+      subtitle: "Senior Men • Touch Rugby",
       cta: "Become a Member",
       link: "/membership",
     },

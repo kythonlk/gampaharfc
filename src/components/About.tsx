@@ -48,7 +48,7 @@ export default function About({ upcomingFixtures }: any) {
       name: 'Madhusanka Karunanayake',
       role: 'Chief Executive Officer',
       bio: 'Leading the strategic vision of the club',
-      image: dabare
+      image: "https://placehold.co/1643x2255/FFFFFF/000.png"
     },
   ];
   return (
@@ -172,7 +172,7 @@ export default function About({ upcomingFixtures }: any) {
             <div className="w-24 h-1.5 bg-white mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-4 max-w-5xl mx-auto">
             {leadership.map((member, index) => (
               <div
                 key={index}
@@ -182,7 +182,7 @@ export default function About({ upcomingFixtures }: any) {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-auto px-40 sm:h-96 object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-auto sm:h-auto sm:max-h-[36em] object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60"></div>
                 </div>

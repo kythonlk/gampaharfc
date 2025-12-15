@@ -1,6 +1,6 @@
 export default function WhatsAppChat() {
 
-  const phoneNumber = "971521329719";
+  const phoneNumber = "94777334708";
   const waLink = `https://wa.me/${phoneNumber}`;
 
   return (
