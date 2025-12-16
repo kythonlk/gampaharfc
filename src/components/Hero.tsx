@@ -15,8 +15,8 @@ export default function HeroWithMembership() {
       img: gampaha,
       title: "Join the Gampaha RFC Family",
       subtitle: "Senior Men • Touch Rugby",
-      cta: "Become a Member",
-      link: "/membership",
+      cta: "Learn More",
+      link: "/about",
     },
     {
       img: "https://qasvqrglwupcdqosogac.supabase.co/storage/v1/object/public/posts/2025-banner.png",

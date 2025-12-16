@@ -5,6 +5,8 @@ import tlogo from '../images/tuskers-logo.webp';
 import l1 from '../images/l1.webp';
 import l2 from '../images/l2.webp';
 import l3 from '../images/l3.webp';
+import kanishka from '../images/Kanishka_Dias.jpg';
+import thilina from '../images/Thilina_Madhuranga.jpg';
 
 import { Calendar, MapPin, Users, Globe, ArrowRight, Quote } from "lucide-react";
 
@@ -52,11 +54,11 @@ export default function TuskersHistory() {
         {/* here two clubs logo */}
         <div className="flex items-center justify-center text-center gap-4 max-w-5xl mx-auto mt-6">
           <img src={glogo} alt="Tuskers" className="h-40 w-auto" />
-          <img src={tlogo} alt="Tuskers" className="h-40 w-auto" />
+          <img src={tlogo} alt="Tuskers" className="h-56 w-auto" />
         </div>
       </section>
 
-      <section className="relative py-20 px-4 md:px-8">
+      <section className="relative py-10 px-4 md:px-8">
         <div className="container mx-auto max-w-7xl">
 
           {/* Vertical Line (Desktop) */}
@@ -118,6 +120,30 @@ export default function TuskersHistory() {
               <div className="mt-6 flex items-center gap-3">
                 <div className="h-px w-12 bg-gray-600"></div>
                 <span className="text-sm font-semibold text-white uppercase tracking-widest">In Memoriam</span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center text-center gap-8 mx-auto mt-6 md:pl-8">
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  src={thilina}
+                  alt="Late Thilina Madhuranga"
+                  className="h-40 md:h-80 w-auto p-1 border border-white/10 bg-white opacity-60 group-hover:opacity-80 transition-opacity duration-500 grayscale hover:grayscale-0"
+                />
+                <p className="text-sm text-white/70">
+                  Late Thilina Madhuranga
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center gap-2">
+                <img
+                  src={kanishka}
+                  alt="Late Kanishka Dias"
+                  className="h-40 md:h-80 w-auto p-1 border border-white/10 bg-white opacity-60 group-hover:opacity-80 transition-opacity duration-500 grayscale hover:grayscale-0"
+                />
+                <p className="text-sm text-white/70">
+                  Late Kanishka Dias
+                </p>
               </div>
             </div>
           </div>

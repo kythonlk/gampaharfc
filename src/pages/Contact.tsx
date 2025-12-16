@@ -116,9 +116,6 @@ export default function Contact() {
                   <p className="text-gray-600 font-semibold mb-2">
                     Founder & Director of Rugby
                   </p>
-                  <p className="text-sm text-gray-600">
-                    Former Sri Lanka Rugby player and coach
-                  </p>
                 </div>
                 <div className="bg-white rounded-xl shadow-lg p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-1">
@@ -126,9 +123,6 @@ export default function Contact() {
                   </h3>
                   <p className="text-gray-600 font-semibold mb-2">
                     Chief Executive Officer
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    Strategic leadership and operations
                   </p>
                 </div>
               </div>
