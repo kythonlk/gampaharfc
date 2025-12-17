@@ -100,7 +100,7 @@ export default function MedicalClearanceForm() {
 
       if (error) throw error;
 
-      await supabase.functions.invoke('send-medical-email', {
+      await supabase.functions.invoke('g-medical', {
         body: data,
       });
 

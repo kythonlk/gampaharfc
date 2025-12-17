@@ -93,7 +93,7 @@ export default function MembershipRegister() {
       if (submitError) throw submitError;
       console.log(formToSubmit);
 
-      const { error: rapidError } = await supabase.functions.invoke("rapid-handler", {
+      const { error: rapidError } = await supabase.functions.invoke("g-reg", {
         body: formToSubmit
       });
 
