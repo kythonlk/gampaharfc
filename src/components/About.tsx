@@ -191,7 +191,7 @@ export default function About({ upcomingFixtures }: any) {
                   <p className="text-gray-600 font-semibold mb-3 text-sm uppercase tracking-wide">
                     {member.role}
                   </p>
-                  <p className="text-sm text-gray-600 leading-relaxed">{member.bio}</p>
+                  {/* <p className="text-sm text-gray-600 leading-relaxed">{member.bio}</p> */}
                 </div>
               </div>
             ))}
