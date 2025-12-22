@@ -35,7 +35,7 @@ export default function EventEditor() {
 
     const fetchEvent = async () => {
         const { data } = await supabase
-            .from('events')
+            .from('gp_events')
             .select('*')
             .eq('id', id)
             .single();
@@ -83,10 +83,10 @@ export default function EventEditor() {
 
             let error;
             if (isNew) {
-                const { error: insertError } = await supabase.from('events').insert([payload]);
+                const { error: insertError } = await supabase.from('gp_events').insert([payload]);
                 error = insertError;
             } else {
-                const { error: updateError } = await supabase.from('events').update(payload).eq('id', id);
+                const { error: updateError } = await supabase.from('gp_events').update(payload).eq('id', id);
                 error = updateError;
             }
 

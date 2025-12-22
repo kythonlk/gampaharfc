@@ -87,7 +87,7 @@ export default function MembershipRegister() {
       formToSubmit.address = address;
 
       const { error: submitError } = await supabase
-        .from('memberships')
+        .from('gp_memberships')
         .insert([formToSubmit]);
 
       if (submitError) throw submitError;

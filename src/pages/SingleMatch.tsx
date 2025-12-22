@@ -12,7 +12,7 @@ function SingleMatch() {
   useEffect(() => {
     async function loadMatch() {
       const { data, error } = await supabase
-        .from("fixtures")
+        .from('gp_fixtures')
         .select("*")
         .eq("id", id)
         .single();

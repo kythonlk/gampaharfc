@@ -15,7 +15,7 @@ export default function PlayersList() {
     const fetchPlayers = async () => {
         setLoading(true);
         const { data, error } = await supabase
-            .from('players')
+            .from('gp_players')
             .select('*')
             .order('name');
 
@@ -27,7 +27,7 @@ export default function PlayersList() {
     const handleDelete = async (id: string) => {
         if (!window.confirm('Are you sure you want to delete this player?')) return;
 
-        const { error } = await supabase.from('players').delete().eq('id', id);
+        const { error } = await supabase.from('gp_players').delete().eq('id', id);
         if (error) {
             alert('Failed to delete player');
             console.error(error);

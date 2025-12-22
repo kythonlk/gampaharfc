@@ -31,7 +31,7 @@ export default function FixtureEditor() {
 
     const fetchFixture = async () => {
         const { data } = await supabase
-            .from('fixtures')
+            .from('gp_fixtures')
             .select('*')
             .eq('id', id)
             .single();
@@ -75,10 +75,10 @@ export default function FixtureEditor() {
 
             let error;
             if (isNew) {
-                const { error: insertError } = await supabase.from('fixtures').insert([payload]);
+                const { error: insertError } = await supabase.from('gp_fixtures').insert([payload]);
                 error = insertError;
             } else {
-                const { error: updateError } = await supabase.from('fixtures').update(payload).eq('id', id);
+                const { error: updateError } = await supabase.from('gp_fixtures').update(payload).eq('id', id);
                 error = updateError;
             }
 

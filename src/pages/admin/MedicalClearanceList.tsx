@@ -15,7 +15,7 @@ export default function MedicalClearanceList() {
     const fetchForms = async () => {
         setLoading(true);
         const { data, error } = await supabase
-            .from('medical_clearance_forms')
+            .from('gp_medical_clearance_forms')
             .select('*');
         console.log(data);
 

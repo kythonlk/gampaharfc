@@ -18,7 +18,7 @@ export default function EventSubmissionsList() {
 
         // Fetch Events for Dropdown & Lookup
         const { data: eventsData, error: eventsError } = await supabase
-            .from('events')
+            .from('gp_events')
             .select('id, title')
             .order('event_date', { ascending: false });
 
@@ -27,7 +27,7 @@ export default function EventSubmissionsList() {
 
         // Fetch Submissions (Removed join to avoid potential FK errors)
         let query = supabase
-            .from('generic_registrations')
+            .from('gp_generic_registrations')
             .select(`
                 id,
                 created_at,

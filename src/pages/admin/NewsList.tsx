@@ -15,7 +15,7 @@ export default function NewsList() {
     const fetchNews = async () => {
         setLoading(true);
         const { data, error } = await supabase
-            .from('news')
+            .from('gp_news')
             .select('*')
             .order('published_date', { ascending: false });
 
@@ -27,7 +27,7 @@ export default function NewsList() {
     const handleDelete = async (id: string) => {
         if (!window.confirm('Are you sure you want to delete this article?')) return;
 
-        const { error } = await supabase.from('news').delete().eq('id', id);
+        const { error } = await supabase.from('gp_news').delete().eq('id', id);
         if (error) {
             alert('Failed to delete article');
             console.error(error);

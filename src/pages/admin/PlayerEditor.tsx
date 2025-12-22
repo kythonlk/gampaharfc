@@ -57,7 +57,7 @@ export default function PlayerEditor() {
 
     const fetchPlayer = async () => {
         const { data } = await supabase
-            .from('players')
+            .from('gp_players')
             .select('*')
             .eq('id', id)
             .single();
@@ -89,10 +89,10 @@ export default function PlayerEditor() {
 
             let error;
             if (isNew) {
-                const { error: insertError } = await supabase.from('players').insert([payload]);
+                const { error: insertError } = await supabase.from('gp_players').insert([payload]);
                 error = insertError;
             } else {
-                const { error: updateError } = await supabase.from('players').update(payload).eq('id', id);
+                const { error: updateError } = await supabase.from('gp_players').update(payload).eq('id', id);
                 error = updateError;
             }
 

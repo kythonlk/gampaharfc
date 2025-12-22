@@ -7,22 +7,22 @@ export default function News() {
   const [news, setNews] = useState<NewsType[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // useEffect(() => {
-  //   const fetchNews = async () => {
-  //     setLoading(true);
-  //     const { data } = await supabase
-  //       .from('news')
-  //       .select('*')
-  //       .order('published_date', { ascending: false });
+  useEffect(() => {
+    const fetchNews = async () => {
+      setLoading(true);
+      const { data } = await supabase
+        .from('gp_news')
+        .select('*')
+        .order('published_date', { ascending: false });
 
-  //     if (data) {
-  //       setNews(data);
-  //     }
-  //     setLoading(false);
-  //   };
+      if (data) {
+        setNews(data);
+      }
+      setLoading(false);
+    };
 
-  //   fetchNews();
-  // }, []);
+    fetchNews();
+  }, []);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-GB', {

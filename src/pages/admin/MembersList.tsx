@@ -16,7 +16,7 @@ export default function MembersList() {
     const fetchMembers = async () => {
         setLoading(true);
         const { data, error } = await supabase
-            .from('memberships')
+            .from('gp_memberships')
             .select('*')
             .order('created_at', { ascending: false });
 

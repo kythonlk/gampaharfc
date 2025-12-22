@@ -29,7 +29,7 @@ export default function NewsEditor() {
 
     const fetchArticle = async () => {
         const { data } = await supabase
-            .from('news')
+            .from('gp_news')
             .select('*')
             .eq('id', id)
             .single();
@@ -61,10 +61,10 @@ export default function NewsEditor() {
 
             let error;
             if (isNew) {
-                const { error: insertError } = await supabase.from('news').insert([payload]);
+                const { error: insertError } = await supabase.from('gp_news').insert([payload]);
                 error = insertError;
             } else {
-                const { error: updateError } = await supabase.from('news').update(payload).eq('id', id);
+                const { error: updateError } = await supabase.from('gp_news').update(payload).eq('id', id);
                 error = updateError;
             }
 

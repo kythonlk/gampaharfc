@@ -42,7 +42,7 @@ export default function Footer() {
   useEffect(() => {
     const fetchSponsors = async () => {
       const { data } = await supabase
-        .from('sponsors')
+        .from('gp_sponsors')
         .select('*')
         .order('display_order', { ascending: true });
       if (data) {

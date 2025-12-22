@@ -19,6 +19,24 @@ import SingleMatch from './pages/SingleMatch';
 import SingleNews from './pages/SingleNews';
 import MedicalClearance from './pages/Medical';
 import TeamPage from './pages/TeamPages';
+
+// Admin Imports
+import AdminRoute from './components/AdminRoute';
+import AdminLayout from './pages/admin/AdminLayout';
+import AdminLogin from './pages/admin/AdminLogin';
+import Dashboard from './pages/admin/Dashboard';
+import MembersList from './pages/admin/MembersList';
+import MemberEditor from './pages/admin/MemberEditor';
+import EventsList from './pages/admin/EventsList';
+import EventEditor from './pages/admin/EventEditor';
+import FixturesList from './pages/admin/FixturesList';
+import FixtureEditor from './pages/admin/FixtureEditor';
+import NewsList from './pages/admin/NewsList';
+import NewsEditor from './pages/admin/NewsEditor';
+import PlayersList from './pages/admin/PlayersList';
+import PlayerEditor from './pages/admin/PlayerEditor';
+import MedicalClearanceList from './pages/admin/MedicalClearanceList';
+import EventSubmissionsList from './pages/admin/EventSubmissionsList';
 import { useLayoutEffect } from 'react';
 
 const Wrapper = ({ children }: { children: React.ReactNode }) => {
@@ -57,6 +75,32 @@ function App() {
               <Route path="/policies" element={<Policies />} />
               <Route path="/match/:id" element={<SingleMatch />} />
               <Route path="/news/:id" element={<SingleNews />} />
+
+              {/* Admin Routes */}
+              <Route path="/admin/login" element={<AdminLogin />} />
+              <Route element={<AdminRoute />}>
+                <Route path="/admin" element={<AdminLayout />}>
+                  <Route path="dashboard" element={<Dashboard />} />
+                  <Route path="members" element={<MembersList />} />
+                  <Route path="members/:id" element={<MemberEditor />} />
+                  <Route path="events" element={<EventsList />} />
+                  <Route path="events/new" element={<EventEditor />} />
+                  <Route path="events/:id" element={<EventEditor />} />
+                  <Route path="fixtures" element={<FixturesList />} />
+                  <Route path="fixtures/new" element={<FixtureEditor />} />
+                  <Route path="fixtures/:id" element={<FixtureEditor />} />
+                  <Route path="news" element={<NewsList />} />
+                  <Route path="news/new" element={<NewsEditor />} />
+                  <Route path="news/:id" element={<NewsEditor />} />
+                  <Route path="players" element={<PlayersList />} />
+                  <Route path="players/new" element={<PlayerEditor />} />
+                  <Route path="players/:id" element={<PlayerEditor />} />
+                  <Route path="medical" element={<MedicalClearanceList />} />
+                  <Route path="submissions" element={<EventSubmissionsList />} />
+                  <Route index element={<Navigate to="/admin/dashboard" replace />} />
+                </Route>
+              </Route>
+
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </main>

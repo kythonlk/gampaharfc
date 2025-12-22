@@ -19,14 +19,14 @@ export default function Dashboard() {
     const fetchStats = async () => {
         setLoading(true);
 
-        const { count: totalMembers } = await supabase.from('memberships').select('*', { count: 'exact', head: true });
-        const { count: totalEvents } = await supabase.from('events').select('*', { count: 'exact', head: true });
+        const { count: totalMembers } = await supabase.from('gp_memberships').select('*', { count: 'exact', head: true });
+        const { count: totalEvents } = await supabase.from('gp_events').select('*', { count: 'exact', head: true });
 
         // Basic approximation for "recent" (last 30 days) if needed, but for now just counts
         // To do real date math would require more complex queries or JS filtering.
         // Let's just grab the data for now.
 
-        const { data: events } = await supabase.from('events').select('event_date');
+        const { data: events } = await supabase.from('gp_events').select('event_date');
         const upcoming = events?.filter(e => new Date(e.event_date) > new Date()).length || 0;
 
         setStats({

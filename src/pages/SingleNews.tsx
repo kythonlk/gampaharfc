@@ -11,7 +11,7 @@ function SingleNews() {
   useEffect(() => {
     async function loadNews() {
       const { data, error } = await supabase
-        .from("news")
+        .from('gp_news')
         .select("*")
         .eq("id", id)
         .single();

@@ -95,7 +95,7 @@ export default function MedicalClearanceForm() {
         declaration_date: formData.declarationDate,
       }
       const { error } = await supabase
-        .from('medical_clearance_forms')
+        .from('gp_medical_clearance_forms')
         .insert([data]);
 
       if (error) throw error;

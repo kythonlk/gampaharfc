@@ -11,7 +11,7 @@ export default function Gallery() {
     const fetchGallery = async () => {
       setLoading(true);
       let query = supabase
-        .from('gallery')
+        .from('gp_gallery')
         .select('*')
         .order('created_at', { ascending: false });
 

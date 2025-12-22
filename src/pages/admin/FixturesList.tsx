@@ -15,7 +15,7 @@ export default function FixturesList() {
     const fetchFixtures = async () => {
         setLoading(true);
         const { data, error } = await supabase
-            .from('fixtures')
+            .from('gp_fixtures')
             .select('*')
             .order('match_date', { ascending: false });
 
@@ -27,7 +27,7 @@ export default function FixturesList() {
     const handleDelete = async (id: string) => {
         if (!window.confirm('Are you sure you want to delete this fixture? This cannot be undone.')) return;
 
-        const { error } = await supabase.from('fixtures').delete().eq('id', id);
+        const { error } = await supabase.from('gp_fixtures').delete().eq('id', id);
         if (error) {
             alert('Failed to delete fixture');
             console.error(error);

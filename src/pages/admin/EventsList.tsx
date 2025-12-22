@@ -15,7 +15,7 @@ export default function EventsList() {
     const fetchEvents = async () => {
         setLoading(true);
         const { data, error } = await supabase
-            .from('events')
+            .from('gp_events')
             .select('*')
             .order('event_date', { ascending: false });
 
@@ -27,7 +27,7 @@ export default function EventsList() {
     const handleDelete = async (id: string) => {
         if (!window.confirm('Are you sure you want to delete this event? This cannot be undone.')) return;
 
-        const { error } = await supabase.from('events').delete().eq('id', id);
+        const { error } = await supabase.from('gp_events').delete().eq('id', id);
         if (error) {
             alert('Failed to delete event');
             console.error(error);

@@ -50,7 +50,7 @@ export default function MemberEditor() {
     const fetchMember = async () => {
         setLoading(true);
         const { data, error } = await supabase
-            .from('memberships')
+            .from('gp_memberships')
             .select('*')
             .eq('id', id)
             .single();
@@ -88,7 +88,7 @@ export default function MemberEditor() {
         setSubmitting(true);
 
         const { error } = await supabase
-            .from('memberships')
+            .from('gp_memberships')
             .update(formData)
             .eq('id', id);
 
